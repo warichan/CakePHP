@@ -27,12 +27,13 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('cake.generic');
+		echo $this->Html->css('/app/webroot/css/cake.generic');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 </head>
 <body>
 	<div id="container">
@@ -48,5 +49,13 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		</div>
 	</div>
 	<?php echo $this->element('sql_dump'); ?>
+<script>
+$(function(){
+	setTimeout(function(){
+		$('#flashMessage').fadeOut("slow");
+	},800);
+});
+</script>
+<!--上記scriptでflashMessageをフワッと消す-->
 </body>
 </html>
