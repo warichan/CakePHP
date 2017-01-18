@@ -9,3 +9,5 @@
     echo $year."年".$month."月".$day."日";
   ?>
 </h2>
+
+<p><?php echo $this->Html->link('今日の記録を登録する', array('action'=>'add')); ?></p>
