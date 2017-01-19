@@ -22,5 +22,8 @@
   <hr>
 <?php endforeach; ?>
 
+<h2>■メニュー</h2>
+
 <p><?php echo $this->Html->link('今日の記録を登録する', array('action'=>'add')); ?></p>
-<p><?php echo $this->Html->link('編集',array('action'=>'edit')); ?></p>
+<p><?php //echo $this->Html->link('今日の記録を編集する', array('action'=>'edit', $post['Post']['id'])); ?></p>
+<!-- if文で登録が既にされていたら、編集リンクを表示させるようにする -->
