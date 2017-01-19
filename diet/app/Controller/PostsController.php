@@ -2,7 +2,7 @@
 
 class PostsController extends AppController{
   public function index(){
-
+    $this->set('posts', $this->Post->find('all'));
   }
 
   public function add() {
@@ -14,6 +14,9 @@ class PostsController extends AppController{
         $this->Flash->set('failed!');
       }
     }
+  }
+  public function edit(){
+    
   }
 }
 
