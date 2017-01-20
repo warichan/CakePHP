@@ -11,26 +11,30 @@
 
 <?php foreach($posts as $post): ?>
 
-  <h3>朝</h3><?php echo h($post['Post']['morning']); ?>
+  <h3>朝</h3><p><?php echo h($post['Post']['morning']); ?></p>
   <hr>
-  <h3>昼</h3><?php echo h($post['Post']['lunch']); ?>
+  <h3>昼</h3><p><?php echo h($post['Post']['lunch']); ?></p>
   <hr>
-  <h3>夜</h3><?php echo h($post['Post']['dinner']); ?>
+  <h3>夜</h3><p><?php echo h($post['Post']['dinner']); ?></p>
   <hr>
-  <h3>体重</h3><?php echo h($post['Post']['weight']); ?>kg
+  <h3>体重</h3><p><?php echo h($post['Post']['weight']); ?>kg</p>
   <hr>
-  <h3>前日の体重比</h3><?php //echo h($post['Post']['difference']); ?>
+  <h3>前日の体重比</h3><p><?php //echo h($post['Post']['difference']); ?>
   <hr>
-  <?php echo $this->Html->link('今日の記録を編集する', array('action'=>'edit', $post['Post']['id'])); ?>
+  <p id="edit"><?php echo $this->Html->link('今日の記録を編集する', array('action'=>'edit', $post['Post']['id'])); ?></p>
 <?php endforeach; ?>
 
 <h2>■メニュー</h2>
-<p><?php echo $this->Html->link('今日の記録を登録する', array('action'=>'add')); ?></p>
-<p><?php echo $this->Html->link('過去一ヶ月の記録を見る', '#'); ?></p>
 
-<?php //if(!$post['Post']['id']) : ?>
-  <p><?php //echo $this->Html->link('今日の記録を登録する', array('action'=>'add')); ?></p>
-<?php //else : ?>
-  <p><?php //echo $this->Html->link('今日の記録を編集する', array('action'=>'edit', $post['Post']['id'])); ?></p>
-  <!-- if文で登録が既にされていたら、編集リンクを表示させるようにする -->
-<?php //endif; ?>
+<p><?php echo $this->Html->link('過去一ヶ月の記録を見る', '#'); ?></p>
+<p id="add"><?php echo $this->Html->link('今日の記録を登録する', array('action'=>'add')); ?></p>
+
+
+<script>
+  $(function(){
+    if($('#edit').length){
+      $('#add').hide();
+      //edit(編集リンク)がある時は、add(登録リンク)を非表示
+    }
+  });
+</script>
