@@ -26,9 +26,10 @@ class PostsController extends AppController{
               $this->redirect(array('action'=>'index'));
           } else {
               $this->Flash->set('編集できませんでした…');
-        }
+          }
       }
   }
 }
+
 
 ?>
