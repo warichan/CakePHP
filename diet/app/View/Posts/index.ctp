@@ -22,30 +22,11 @@
   <h3>前日の体重比</h3><?php //echo h($post['Post']['difference']); ?>
   <hr>
   <?php echo $this->Html->link('今日の記録を編集する', array('action'=>'edit', $post['Post']['id'])); ?>
-  <?php endforeach; ?>
-
-
-
-
-
-
-
-  <?php //if (!$post['Post']['created'] == $today):?>
-  <?php //echo "aaa";?>
-  <?php //endif;?>
-  <?php //if($post['Post']['created'])?>
-  <p><?php //echo $this->Html->link('今日の記録を登録する', array('action'=>'add')); ?></p>
-  <?php //else :?>
-  <p><?php //echo $this->Html->link('今日の記録を編集する', array('action'=>'edit', $post['Post']['id'])); ?></p>
-  <?php //endif;?>
-
-
-
-
-
+<?php endforeach; ?>
 
 <h2>■メニュー</h2>
 <p><?php echo $this->Html->link('今日の記録を登録する', array('action'=>'add')); ?></p>
+<p><?php echo $this->Html->link('過去一ヶ月の記録を見る', '#'); ?></p>
 
 <?php //if(!$post['Post']['id']) : ?>
   <p><?php //echo $this->Html->link('今日の記録を登録する', array('action'=>'add')); ?></p>
