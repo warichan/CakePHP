@@ -29,6 +29,10 @@ class PostsController extends AppController{
           }
       }
   }
+
+  public function yesterday(){
+    
+  }
 }
 
 
