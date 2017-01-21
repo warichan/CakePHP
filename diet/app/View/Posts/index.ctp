@@ -37,4 +37,8 @@
       //edit(編集リンク)がある時は、add(登録リンク)を非表示
     }
   });
+
+  $(function(){
+    $('#flashMessage').fadeOut(1000);
+  })
 </script>
