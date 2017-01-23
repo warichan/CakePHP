@@ -13,6 +13,22 @@ class PostsController extends AppController{
     $this->set('post',$this->Post->find('first',$params));
     //今日(00:00:00〜23:59:59)のデータを取得してpostsに渡している
     $this->log($this->Post->getDataSource()->getLog(), LOG_DEBUG);
+
+
+    /*以下、体重比を計算する為の昨日のデータを取得するコード*/
+
+
+    $date = new DateTime();
+    $date->sub(new DateInterval('P1D'));
+    $yesterday = $date->format('Y'.'-'.'m'.'-'.'d');
+
+    $params = array(
+      'conditions'=>array(
+        'created BETWEEN ? AND ?'=>array($yesterday.' 00:00:00',$yesterday.' 23:59:59')
+      )
+    );
+    $this->set('post_2',$this->Post->find('first',$params));
+    //昨日(00:00:00〜23:59:59)のデータを取得してpostsに渡している
   }
 
   public function add() {
