@@ -26,9 +26,8 @@
 
 <h2>■メニュー</h2>
 
-<p><?php echo $this->Html->link('昨日の記録を確認する', array('action' => 'yesterday')); ?></p>
 <p id="add"><?php echo $this->Html->link('今日の記録を登録する', array('action'=>'add')); ?></p>
-
+<p><?php echo $this->Html->link('昨日の記録を確認する', array('action' => 'yesterday')); ?></p>
 
 <script>
   $(function(){
