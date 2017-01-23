@@ -10,7 +10,7 @@ class PostsController extends AppController{
         'created BETWEEN ? AND ?'=>array($today.' 00:00:00',$today.' 23:59:59')
       )
     );
-    $this->set('posts',$this->Post->find('all',$params));
+    $this->set('post',$this->Post->find('first',$params));
     //今日(00:00:00〜23:59:59)のデータを取得してpostsに渡している
     $this->log($this->Post->getDataSource()->getLog(), LOG_DEBUG);
   }
