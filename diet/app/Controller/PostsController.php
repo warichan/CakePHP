@@ -50,7 +50,7 @@ class PostsController extends AppController{
         'created BETWEEN ? AND ?'=>array($yesterday.' 00:00:00',$yesterday.' 23:59:59')
       )
     );
-    $this->set('posts',$this->Post->find('all',$params));
+    $this->set('post',$this->Post->find('first',$params));
     //昨日(00:00:00〜23:59:59)のデータを取得してpostsに渡している
   }
 }
