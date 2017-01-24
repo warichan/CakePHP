@@ -18,7 +18,15 @@
   <hr>
   <h3>体重</h3><p><?php echo h($post['Post']['weight']); ?>kg</p>
   <hr>
-  <h3>前日の体重比</h3><p><?php echo h($post['Post']['weight'] - $post_2['Post']['weight']); ?>kg</p>
+  <h3>前日の体重比</h3>
+  <p>
+    <!--今日の体重と昨日の体重を比較して、今日の方が体重が大きかったら体重の前に+記号を付ける-->
+    <?php if (h($post['Post']['weight'] > $post_2['Post']['weight'])): ?>
+    <?php echo '+'.h($post['Post']['weight'] - $post_2['Post']['weight']); ?>
+    <?php else: ?>
+    <?php echo h($post['Post']['weight'] - $post_2['Post']['weight']); ?>
+    <?php endif; ?>
+  kg</p>
   <hr>
   <p id="edit"><?php echo $this->Html->link('今日の記録を編集する', array('action'=>'edit', $post['Post']['id'])); ?></p>
 <?php endif; ?>
