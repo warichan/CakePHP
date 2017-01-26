@@ -2,9 +2,9 @@
 
 <?php
 echo $this->Form->create('Post',array('action'=>'edit'));
-echo $this->Form->input('morning');
-echo $this->Form->input('lunch');
-echo $this->Form->input('dinner');
-echo $this->Form->input('weight');
+echo $this->Form->input('morning',array('label'=>'朝'));
+echo $this->Form->input('lunch',array('label'=>'昼'));
+echo $this->Form->input('dinner',array('label'=>'夜'));
+echo $this->Form->input('weight',array('label'=>'体重'));
 echo $this->Form->end('save');
 ?>
