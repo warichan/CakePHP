@@ -16,6 +16,8 @@
   <hr>
   <h3>夜</h3><p><?php echo h($post['Post']['dinner']); ?></p>
   <hr>
+  <h3>メモ</h3><p><?php echo h($post['Post']['memo']); ?><p>
+  <hr>
   <h3>体重</h3><p><?php echo h($post['Post']['weight']); ?>kg</p>
   <hr>
   <h3>前日の体重比</h3>
