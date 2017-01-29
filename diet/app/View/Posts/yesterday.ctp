@@ -13,7 +13,7 @@
   <hr>
   <h3>夜</h3><p><?php echo h($post_2['Post']['dinner']); ?></p>
   <hr>
-  <h3>メモ</h3><p><?php echo h($post['Post']['memo']); ?><p>
+  <h3>メモ</h3><p><?php echo h($post_2['Post']['memo']); ?><p>
   <hr>
   <h3>体重</h3><p><?php echo h($post_2['Post']['weight']); ?>kg</p>
   <hr>
