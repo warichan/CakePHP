@@ -67,6 +67,8 @@ Cache::config('default', array('engine' => 'File'));
  * CakePlugin::load('DebugKit'); // Loads a single plugin named DebugKit
  */
 
+ require_once ROOT . DS . 'app' . DS . 'Vendor' . DS . 'PHPUnit' . DS . 'autoload.php';
+
 /**
  * To prefer app translation over plugin translation, you can set
  *
