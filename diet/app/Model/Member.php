@@ -1,7 +1,7 @@
 <?php
 
-class Members extends AppModel{
-  
+class Member extends AppModel{
+
 }
 
 ?>

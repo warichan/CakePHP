@@ -2,7 +2,7 @@
 
 class MembersController extends AppController{
 
-  public function index(){
+  public function login(){
     //ログイン
 
   }
